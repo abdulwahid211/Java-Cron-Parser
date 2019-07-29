@@ -1,5 +1,3 @@
-package cronParserCode;
-
 public class Month extends Unit {
 
     public Month(String _expression) {

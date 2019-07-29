@@ -1,5 +1,3 @@
-package cronParserCode;
-
 import java.util.ArrayList;
 
 public class CronParser {

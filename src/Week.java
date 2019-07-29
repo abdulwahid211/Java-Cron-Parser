@@ -1,5 +1,3 @@
-package cronParserCode;
-
 public class Week extends Unit {
 
     public Week(String _expression) {

@@ -1,5 +1,3 @@
-package cronParserCode;
-
 public class DaysOfMonth extends Unit {
 
     public DaysOfMonth(String _expression) {
@@ -18,7 +16,7 @@ public class DaysOfMonth extends Unit {
 
     @Override
     public String toString() {
-        return "Days: " + getOutcome();
+        return "Day of month: " + getOutcome();
     }
 
 

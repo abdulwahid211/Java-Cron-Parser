@@ -1,5 +1,3 @@
-package cronParserCode;
-
 import java.util.Scanner;
 
 

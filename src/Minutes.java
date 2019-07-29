@@ -1,5 +1,3 @@
-package cronParserCode;
-
 public class Minutes extends Unit {
 
 
