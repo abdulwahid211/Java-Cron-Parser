@@ -53,8 +53,12 @@ public abstract class Unit {
             outputRangeValues();
         } else if (getExpression().contains(",")) {
             outputListSeperator();
-        } else {
+        }
+        else if (getExpression().contains("*")) {
             outputAnyValue();
+        }
+        else {
+            setOutcome(getExpression());
         }
 
 
@@ -64,7 +68,9 @@ public abstract class Unit {
     //set a output any value if its has *
     public void outputAnyValue() {
 
+
         for (int i = getMinRage(); i <= getMaxRage(); i++) {
+
 
             setOutcome(getOutcome() + " " + i);
 
@@ -84,7 +90,8 @@ public abstract class Unit {
     //set a output a value if it has range -
     public void outputRangeValues() {
 
-        String sperate[] = getExpression().split("-");
+
+        String sperate[] = getExpression().trim().split("-");
 
         int min = Integer.parseInt(sperate[0]);
 

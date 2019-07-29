@@ -6,13 +6,10 @@ public class Minutes extends Unit {
     public Minutes(String _expression) {
         super(_expression);
 
-        if (_expression.length() > 0) {
-            assertCorrectOutput();
-            setMinRage(0);
-            setMaxRage(60);
-        } else {
-            throw new java.lang.RuntimeException("No expression input for Minute");
-        }
+        setMinRage(0);
+        setMaxRage(60);
+        assertCorrectOutput();
+
 
     }
 
@@ -20,15 +17,15 @@ public class Minutes extends Unit {
     @Override
     public void outputStepValues() {
 
-        int step = Integer.parseInt(getExpression().replace("*/", ""));
+        int step = Integer.parseInt(getExpression().trim().replace("*/", ""));
 
-        setOutcome(getOutcome() + " " + 0);
+        int result = 0;
 
-        for (int i =0; step <= 60; i++) {
+        for (int i = 0; result < 60; i++) {
 
-            setOutcome(getOutcome() + " " + step);
+            setOutcome(getOutcome() + " " + result);
 
-            step = step + step;
+            result = result + step;
 
         }
 
